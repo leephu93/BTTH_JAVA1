@@ -6,7 +6,7 @@ public class XE {
 
     String somay;
     String sokhung;
-    float giathanh;
+    double giathanh;
     String hangsanxuat;
     Scanner scanner = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class XE {
 
     }
 
-    XE(String somay, String sokhung, float giathanh, String hangsanxuat) {
+    XE(String somay, String sokhung, double giathanh, String hangsanxuat) {
         this.somay = somay;
         this.sokhung = sokhung;
         this.giathanh = giathanh;
@@ -27,7 +27,7 @@ public class XE {
         System.out.print("NHẬP SỐ KHUNG XE: ");
         this.sokhung = scanner.nextLine();
         System.out.print("NHẬP GÍA XE: ");
-        this.giathanh = Float.parseFloat(scanner.nextLine());
+        this.giathanh = Double.parseDouble(scanner.nextLine());
         System.out.print("NHẬP HÃNG SẢN XUẤT XE: ");
         this.hangsanxuat = scanner.nextLine();
     }

@@ -15,6 +15,7 @@ public class QLXEOTO {
         System.out.print("KHAI BÁO SỐ LƯỢNG XE OTO MUỐN NHẬP: ");
         int n = scanner.nextInt();
         for (int i = 0; i < n; i++) {
+            System.out.println(">>> XE OTO THỨ " + (i + 1));
             XEOTO xoto = new XEOTO();
             xoto.NHAPTHONGTINXE();
             ar_xoto.add(xoto);
@@ -31,7 +32,7 @@ public class QLXEOTO {
         }
 
         System.out.println("**********HIỂN THỊ XE OTO CÓ GIÁ CAO NHẤT**********");
-        float max = 0;
+        double max = 0;
         XEOTO xoto = new XEOTO();
         for (Object item : ar_xoto) {
             if (item instanceof XEOTO) {
@@ -47,7 +48,7 @@ public class QLXEOTO {
         int count1 = 0;
         for (Object item : ar_xoto) {
             if (item instanceof XEOTO) {
-                if (((XEOTO) item).hangsanxuat.equals("FORD") && ((XEOTO) item).giathanh > (float) 200000000) {
+                if (((XEOTO) item).hangsanxuat.equals("FORD") && ((XEOTO) item).giathanh > (double) 200000000) {
                     count1++;
                     System.out.println(">>> XE OTO THỨ " + count1);
                     ((XEOTO) item).XEMTHONGTINXE();
